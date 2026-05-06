@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Felipe Muros | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio moderno com foco em resultado, projetos e proposta de valor profissional."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb bg-orb-1" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb-2" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="logo" href="#inicio">
+          <span class="logo-mark">●</span>
+          <span id="brandName">Seu Nome</span>
+        </a>
+        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#resultados">Resultados</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero container reveal">
+        <p class="eyebrow">Engenheiro de Software Full Stack</p>
+         <h1>
+           Eu construo
+          <span class="hero-accent">desafios complexos</span>
+            com foco em performance, qualidade e impacto de negocio.
+        </h1>
+        <p class="hero-lead" id="heroPitch">
+          Engenharia de software orientada a resultado, com foco em qualidade, velocidade de entrega e impacto de negocio.
+        </p>
+        <div class="hero-actions">
+          <a id="ctaPrimary" class="btn btn-primary" href="#contato">Vamos conversar</a>
+          <a id="ctaSecondary" class="btn btn-ghost" href="#projetos">Ver projetos</a>
+        </div>
+        <ul class="hero-metrics" id="metricsList">
+          <li>
+            <strong>+0</strong>
+            <span>Projetos entregues</span>
+          </li>
+          <li>
+            <strong>0%</strong>
+            <span>Melhoria de performance</span>
+          </li>
+          <li>
+            <strong>+0</strong>
+            <span>Anos de experiência</span>
+          </li>
+        </ul>
+      </section>
+
+      <section id="sobre" class="section container reveal">
+        <div class="section-head">
+          <p class="eyebrow">Sobre</p>
+          <h2>Posicionamento profissional</h2>
+        </div>
+        <div class="about-grid">
+          <p id="aboutText">
+            Sou um profissional focado em resolver problemas reais com tecnologia. Atuo conectando visão de produto, arquitetura sólida e execução eficiente para entregar soluções que geram valor mensurável.
+          </p>
+          <ul class="skill-chips" id="skillsList">
+            <li>Arquitetura de Software</li>
+            <li>Cloud</li>
+            <li>APIs</li>
+            <li>Front-end</li>
+            <li>Back-end</li>
+            <li>IA aplicada</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projetos" class="section container reveal">
+        <div class="section-head">
+          <p class="eyebrow">Projetos em destaque</p>
+          <h2>Entregas com impacto</h2>
+        </div>
+        <div id="projectsGrid" class="projects-grid"></div>
+      </section>
+
+      <section id="resultados" class="section container reveal">
+        <div class="section-head">
+          <p class="eyebrow">Resultados</p>
+          <h2>O que eu gero de valor</h2>
+        </div>
+        <div class="results-grid" id="resultsGrid"></div>
+      </section>
+
+      <section id="contato" class="section container reveal">
+        <div class="contact-card">
+          <p class="eyebrow">Contato</p>
+          <h2>Aberto a oportunidades e projetos estratégicos</h2>
+          <p>
+            Se fizer sentido para seu time ou negócio, vamos conversar sobre como posso ajudar a acelerar resultados.
+          </p>
+          <div class="contact-actions">
+            <a id="linkedinLink" class="btn btn-primary" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a id="githubLink" class="btn btn-ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+            <a id="emailLink" class="btn btn-ghost" href="mailto:email@exemplo.com">Email</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer container">
+      <p><span id="footerName">Seu Nome</span> • <span id="footerRole">Profissional de Tecnologia</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
