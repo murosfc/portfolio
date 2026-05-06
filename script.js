@@ -1,91 +1,297 @@
 const profileData = {
   name: "Felipe Muros",
-  role: "Engenheiro de Software Full Stack",
-  headline:
-    "Engenheiro de software com foco em produto, performance e entrega continua. Especialidade em TypeScript, Angular, FastAPI e Firebase para criar solucoes escalaveis e de alto impacto.",
-  about:
-    "Atuo na construcao de produtos digitais ponta a ponta, unindo experiencia em front-end, back-end e visao de negocio. Tenho background em engenharia de producao, pos-graduacao em gestao de projetos e experiencia com sistemas web em ambientes reais de operacao.",
   links: {
     linkedin: "https://www.linkedin.com/in/felipe-muros-48367433/",
     github: "https://github.com/murosfc",
     email: "muros@yahoo.com.br"
   },
-  metrics: [
-    { value: "73+", label: "Repositorios no GitHub" },
-    { value: "992", label: "Contribuicoes no ultimo ano" },
-    { value: "Full Stack", label: "Front-end e Back-end" }
-  ],
-  skills: [
-    "Arquitetura de Software",
-    "TypeScript",
-    "Angular",
-    "Python",
-    "FastAPI",
-    "Firebase",
-    "APIs",
-    "Front-end",
-    "Back-end",
-    "Automacao",
-    "Testes"
-  ],
-  projects: [
-    {
-      name: "locadora-TDD-typescript",
-      stack: "TypeScript, Node.js, TDD",
-      description:
-        "Projeto orientado a testes para consolidar boas praticas de desenvolvimento e qualidade de codigo.",
-      outcomes: [
-        "Modelagem de regras de negocio com foco em confiabilidade",
-        "Implementacao guiada por testes automatizados",
-        "Base reutilizavel para evolucoes futuras"
+  i18n: {
+    pt: {
+      htmlLang: "pt-BR",
+      role: "Engenheiro de Software Full Stack",
+      metaDescription:
+        "Portfólio moderno com foco em resultado, projetos e proposta de valor profissional.",
+      nav: {
+        about: "Sobre",
+        projects: "Projetos",
+        results: "Resultados",
+        contact: "Contato"
+      },
+      hero: {
+        eyebrow: "Engenheiro de Software Full Stack",
+        title:
+          'Eu construo <span class="hero-accent">soluções digitais</span> com foco em performance, qualidade e impacto de negócio.',
+        lead:
+          "Engenharia de software orientada a resultado, com foco em qualidade, velocidade de entrega e impacto de negócio.",
+        ctaPrimary: "Vamos conversar",
+        ctaSecondary: "Ver projetos"
+      },
+      about: {
+        eyebrow: "Sobre",
+        title: "Posicionamento profissional",
+        text:
+          "Atuo na construção de produtos digitais ponta a ponta, unindo experiência em front-end, back-end e visão de negócio. Tenho background em engenharia de produção, pós-graduação em gestão de projetos e experiência com sistemas web em ambientes reais de operação."
+      },
+      sections: {
+        projectsEyebrow: "Projetos em destaque",
+        projectsTitle: "Entregas com impacto",
+        domainsEyebrow: "Experiência setorial",
+        domainsTitle: "Domínios onde agrego além do código",
+        resultsEyebrow: "Resultados",
+        resultsTitle: "O que eu gero de valor",
+        contactEyebrow: "Contato",
+        contactTitle: "Aberto a oportunidades e projetos estratégicos",
+        contactText:
+          "Se fizer sentido para seu time ou negócio, vamos conversar sobre como posso ajudar a acelerar resultados."
+      },
+      labels: {
+        projectLink: "Ver projeto",
+        email: "E-mail"
+      },
+      metrics: [
+        { value: "73+", label: "Repositórios no GitHub" },
+        { value: "992", label: "Contribuições no último ano" },
+        { value: "Full Stack", label: "Front-end e Back-end" }
       ],
-      link: "https://github.com/murosfc/locadora-TDD-typescript"
+      skills: [
+        "Arquitetura de Software",
+        "TypeScript",
+        "Angular",
+        "Python",
+        "FastAPI",
+        "Firebase",
+        "APIs",
+        "Front-end",
+        "Back-end",
+        "Automação",
+        "Testes"
+      ],
+      domainExpertise: [
+        {
+          title: "Óleo e gás",
+          text: "Vivência no setor para compreender regras, riscos operacionais e prioridades de negócio em soluções de software."
+        },
+        {
+          title: "Planejamento",
+          text: "Capacidade de estruturar escopo, prazos e etapas com visão prática de execução e previsibilidade."
+        },
+        {
+          title: "Projetos",
+          text: "Experiência em ambientes orientados a projetos, conectando objetivos estratégicos com entregas técnicas."
+        },
+        {
+          title: "Logística internacional",
+          text: "Entendimento de fluxos, dependências e criticidade operacional para apoiar sistemas com contexto global."
+        },
+        {
+          title: "Compras",
+          text: "Conhecimento de processos de suprimentos e tomada de decisão para criar ferramentas alinhadas à operação."
+        }
+      ],
+      projects: [
+        {
+          name: "Find'n Me",
+          stack: "Dart, Flutter, Python, Java, PostgreSQL, Node.js, Firebase, Realidade Aumentada",
+          description:
+            "App de localização de usuários e dispositivos com uso de realidade aumentada para navegação e identificação em campo.",
+          outcomes: [
+            "Integração entre app mobile, serviços de backend e base de dados",
+            "Experiência interativa com recursos de realidade aumentada",
+            "Arquitetura preparada para rastreamento e evolução de funcionalidades"
+          ],
+          link: "https://github.com/murosfc/findme"
+        },
+        {
+          name: "Naty Consultoria Web",
+          stack: "Thymeleaf, Java, Spring Boot",
+          description:
+            "Aplicação web para consultoria de moda, com foco em gestão de clientes e agenda de serviços.",
+          outcomes: [
+            "Organização de atendimentos, histórico e relacionamento com clientes",
+            "Controle de agenda com visão operacional do negócio",
+            "Base escalável para crescimento de funcionalidades administrativas"
+          ],
+          link: "https://github.com/murosfc"
+        },
+        {
+          name: "Dante Sleep",
+          stack: "Dart, Flutter, IA aplicada",
+          description:
+            "App para monitoramento de sono e alimentação de bebê com uso de IA para apoio à rotina familiar.",
+          outcomes: [
+            "Sugestões inteligentes de janela de sono",
+            "Previsão da próxima soneca e próxima mamadeira",
+            "Apoio à tomada de decisão com base em dados da rotina"
+          ],
+          link: "https://github.com/murosfc/dante-sleep"
+        }
+      ],
+      valueHighlights: [
+        {
+          title: "Visão de produto",
+          text: "Traduzo necessidades de negócio em funcionalidades técnicas objetivas e mensuráveis."
+        },
+        {
+          title: "Entrega com qualidade",
+          text: "Trabalho com foco em boas práticas, testes e manutenção para reduzir retrabalho."
+        },
+        {
+          title: "Perfil multidisciplinar",
+          text: "Uno experiência técnica e formação em gestão para acelerar resultados de times e projetos."
+        }
+      ]
     },
-    {
-      name: "findme",
-      stack: "Java",
-      description:
-        "Aplicacao desenvolvida como projeto academico com foco em experiencia do usuario e funcionalidade pratica.",
-      outcomes: [
-        "Aplicacao completa com escopo real",
-        "Consolidacao de fundamentos de engenharia de software",
-        "Documentacao e estrutura de projeto reutilizaveis"
+    en: {
+      htmlLang: "en",
+      role: "Full Stack Software Engineer",
+      metaDescription:
+        "Modern portfolio focused on results, projects, and professional value proposition.",
+      nav: {
+        about: "About",
+        projects: "Projects",
+        results: "Results",
+        contact: "Contact"
+      },
+      hero: {
+        eyebrow: "Full Stack Software Engineer",
+        title:
+          'I build <span class="hero-accent">digital solutions</span> focused on performance, quality, and business impact.',
+        lead:
+          "Results-driven software engineering with focus on quality, delivery speed, and measurable business impact.",
+        ctaPrimary: "Let\'s talk",
+        ctaSecondary: "See projects"
+      },
+      about: {
+        eyebrow: "About",
+        title: "Professional positioning",
+        text:
+          "I work on end-to-end digital products, combining front-end and back-end expertise with business vision. I have a production engineering background, a postgraduate degree in project management, and hands-on experience with web systems in real operational environments."
+      },
+      sections: {
+        projectsEyebrow: "Featured projects",
+        projectsTitle: "Impactful deliveries",
+        domainsEyebrow: "Industry expertise",
+        domainsTitle: "Domains where I add value beyond code",
+        resultsEyebrow: "Results",
+        resultsTitle: "The value I deliver",
+        contactEyebrow: "Contact",
+        contactTitle: "Open to strategic opportunities and projects",
+        contactText:
+          "If it makes sense for your team or business, let\'s talk about how I can help accelerate outcomes."
+      },
+      labels: {
+        projectLink: "View project",
+        email: "Email"
+      },
+      metrics: [
+        { value: "73+", label: "GitHub repositories" },
+        { value: "992", label: "Contributions in the last year" },
+        { value: "Full Stack", label: "Front-end and Back-end" }
       ],
-      link: "https://github.com/murosfc/findme"
-    },
-    {
-      name: "locadora-frontend-react",
-      stack: "React, JavaScript, Integracao de API",
-      description:
-        "Front-end criado para validacao de API em cenarios de locadora, com foco em fluxo de usuario e integracao.",
-      outcomes: [
-        "Interface organizada para testes de funcionalidades",
-        "Consumo de API com foco em clareza e manutencao",
-        "Base preparada para evolucao incremental"
+      skills: [
+        "Software Architecture",
+        "TypeScript",
+        "Angular",
+        "Python",
+        "FastAPI",
+        "Firebase",
+        "APIs",
+        "Front-end",
+        "Back-end",
+        "Automation",
+        "Testing"
       ],
-      link: "https://github.com/murosfc/locadora-frontend-react"
+      domainExpertise: [
+        {
+          title: "Oil and gas",
+          text: "Industry background to understand business rules, operational risks, and priorities when building software solutions."
+        },
+        {
+          title: "Planning",
+          text: "Ability to structure scope, timelines, and phases with a practical execution and predictability mindset."
+        },
+        {
+          title: "Projects",
+          text: "Experience in project-driven environments, connecting strategic goals to technical deliveries."
+        },
+        {
+          title: "International logistics",
+          text: "Understanding of flows, dependencies, and operational criticality to support systems in global contexts."
+        },
+        {
+          title: "Procurement",
+          text: "Knowledge of sourcing and purchasing processes to build tools aligned with real operational decisions."
+        }
+      ],
+      projects: [
+        {
+          name: "findnme",
+          stack: "Dart, Flutter, Python, Java, PostgreSQL, Node.js, Firebase, Augmented Reality",
+          description:
+            "User and device location app using augmented reality for guided navigation and on-field identification.",
+          outcomes: [
+            "Integrated mobile app, backend services, and data layer",
+            "Delivered interactive experience with augmented reality resources",
+            "Architecture prepared for tracking and feature evolution"
+          ],
+          link: "https://github.com/murosfc/findme"
+        },
+        {
+          name: "Naty Consultoria Web",
+          stack: "Thymeleaf, Java, Spring Boot",
+          description:
+            "Web application for a fashion consultancy focused on client management and service scheduling.",
+          outcomes: [
+            "Improved service operations through client and history organization",
+            "Structured scheduling flow with operational visibility",
+            "Scalable base for new administrative features"
+          ],
+          link: "https://github.com/murosfc"
+        },
+        {
+          name: "dante-sleep",
+          stack: "Dart, Flutter, Applied AI",
+          description:
+            "Baby sleep and feeding monitoring app using AI to support family daily routines.",
+          outcomes: [
+            "Smart sleep window suggestions",
+            "Prediction of next nap and next feeding",
+            "Data-informed support for daily caregiving decisions"
+          ],
+          link: "https://github.com/murosfc/dante-sleep"
+        }
+      ],
+      valueHighlights: [
+        {
+          title: "Product mindset",
+          text: "I translate business needs into objective and measurable technical features."
+        },
+        {
+          title: "Quality-driven delivery",
+          text: "I work with best practices, testing, and maintainability to reduce rework."
+        },
+        {
+          title: "Multidisciplinary profile",
+          text: "I combine technical expertise and management background to accelerate team and project outcomes."
+        }
+      ]
     }
-  ],
-  valueHighlights: [
-    {
-      title: "Visao de produto",
-      text: "Traduzo necessidades de negocio em funcionalidades tecnicas objetivas e mensuraveis."
-    },
-    {
-      title: "Entrega com qualidade",
-      text: "Trabalho com foco em boas praticas, testes e manutencao para reduzir retrabalho."
-    },
-    {
-      title: "Perfil multidisciplinar",
-      text: "Uno experiencia tecnica e formacao em gestao para acelerar resultados de times e projetos."
-    }
-  ]
+  }
 };
+
+let currentLang = "pt";
 
 function setText(id, value) {
   const element = document.getElementById(id);
   if (element) {
     element.textContent = value;
+  }
+}
+
+function setHtml(id, value) {
+  const element = document.getElementById(id);
+  if (element) {
+    element.innerHTML = value;
   }
 }
 
@@ -116,7 +322,7 @@ function renderSkills(items) {
   list.innerHTML = items.map((skill) => `<li>${skill}</li>`).join("");
 }
 
-function renderProjects(items) {
+function renderProjects(items, linkLabel) {
   const container = document.getElementById("projectsGrid");
   if (!container) {
     return;
@@ -132,7 +338,7 @@ function renderProjects(items) {
         <ul class="project-points">
           ${project.outcomes.map((point) => `<li>${point}</li>`).join("")}
         </ul>
-        <a class="project-link" href="${project.link}" target="_blank" rel="noreferrer">Ver projeto</a>
+        <a class="project-link" href="${project.link}" target="_blank" rel="noreferrer">${linkLabel}</a>
       </article>
     `
     )
@@ -149,6 +355,24 @@ function renderValueHighlights(items) {
     .map(
       (item) => `
       <article class="result-card">
+        <h3>${item.title}</h3>
+        <p class="project-meta">${item.text}</p>
+      </article>
+    `
+    )
+    .join("");
+}
+
+function renderDomainExpertise(items) {
+  const container = document.getElementById("domainsGrid");
+  if (!container) {
+    return;
+  }
+
+  container.innerHTML = items
+    .map(
+      (item) => `
+      <article class="domain-card">
         <h3>${item.title}</h3>
         <p class="project-meta">${item.text}</p>
       </article>
@@ -194,6 +418,80 @@ function setupMobileMenu() {
   });
 }
 
+function setupLanguageSwitcher() {
+  const ptButton = document.getElementById("langPt");
+  const enButton = document.getElementById("langEn");
+
+  if (!ptButton || !enButton) {
+    return;
+  }
+
+  ptButton.addEventListener("click", () => applyLanguage("pt"));
+  enButton.addEventListener("click", () => applyLanguage("en"));
+}
+
+function setActiveLanguageButton(lang) {
+  const ptButton = document.getElementById("langPt");
+  const enButton = document.getElementById("langEn");
+
+  if (!ptButton || !enButton) {
+    return;
+  }
+
+  ptButton.classList.toggle("active", lang === "pt");
+  enButton.classList.toggle("active", lang === "en");
+}
+
+function applyLanguage(lang) {
+  currentLang = lang;
+  const content = profileData.i18n[lang];
+
+  document.documentElement.lang = content.htmlLang;
+  document.title = `${profileData.name} | Portfolio`;
+
+  const metaDescription = document.querySelector('meta[name="description"]');
+  if (metaDescription) {
+    metaDescription.setAttribute("content", content.metaDescription);
+  }
+
+  setText("brandName", profileData.name);
+  setText("footerName", profileData.name);
+  setText("footerRole", content.role);
+
+  setText("navAbout", content.nav.about);
+  setText("navProjects", content.nav.projects);
+  setText("navResults", content.nav.results);
+  setText("navContact", content.nav.contact);
+
+  setText("heroEyebrow", content.hero.eyebrow);
+  setHtml("heroTitle", content.hero.title);
+  setText("heroPitch", content.hero.lead);
+  setText("ctaPrimary", content.hero.ctaPrimary);
+  setText("ctaSecondary", content.hero.ctaSecondary);
+
+  setText("aboutEyebrow", content.about.eyebrow);
+  setText("aboutTitle", content.about.title);
+  setText("aboutText", content.about.text);
+
+  setText("projectsEyebrow", content.sections.projectsEyebrow);
+  setText("projectsTitle", content.sections.projectsTitle);
+  setText("domainsEyebrow", content.sections.domainsEyebrow);
+  setText("domainsTitle", content.sections.domainsTitle);
+  setText("resultsEyebrow", content.sections.resultsEyebrow);
+  setText("resultsTitle", content.sections.resultsTitle);
+  setText("contactEyebrow", content.sections.contactEyebrow);
+  setText("contactTitle", content.sections.contactTitle);
+  setText("contactText", content.sections.contactText);
+  setText("emailLink", content.labels.email);
+
+  renderMetrics(content.metrics);
+  renderSkills(content.skills);
+  renderDomainExpertise(content.domainExpertise);
+  renderProjects(content.projects, content.labels.projectLink);
+  renderValueHighlights(content.valueHighlights);
+  setActiveLanguageButton(lang);
+}
+
 function setupRevealAnimations() {
   const items = document.querySelectorAll(".reveal");
 
@@ -221,19 +519,10 @@ function setupRevealAnimations() {
 }
 
 function initPortfolio() {
-  setText("brandName", profileData.name);
-  setText("footerName", profileData.name);
-  setText("footerRole", profileData.role);
-  setText("heroPitch", profileData.headline);
-  setText("aboutText", profileData.about);
-
-  renderMetrics(profileData.metrics);
-  renderSkills(profileData.skills);
-  renderProjects(profileData.projects);
-  renderValueHighlights(profileData.valueHighlights);
-
   setupLinks();
   setupMobileMenu();
+  setupLanguageSwitcher();
+  applyLanguage(currentLang);
   setupRevealAnimations();
 }
 

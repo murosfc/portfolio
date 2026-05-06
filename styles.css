@@ -107,6 +107,32 @@ body {
   color: var(--brand);
 }
 
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.lang-btn {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lang-btn.active {
+  background: rgba(10, 209, 200, 0.22);
+  color: var(--text);
+}
+
 .nav-toggle {
   display: none;
   border: 1px solid var(--line);
@@ -290,6 +316,12 @@ h3 {
   gap: 14px;
 }
 
+.domains-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
 .project-card,
 .result-card {
   border: 1px solid var(--line);
@@ -297,6 +329,17 @@ h3 {
   padding: 18px;
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
   box-shadow: var(--shadow);
+}
+
+.domain-card {
+  border: 1px solid rgba(10, 209, 200, 0.35);
+  border-radius: var(--radius);
+  padding: 14px;
+  background: linear-gradient(155deg, rgba(10, 209, 200, 0.09), rgba(255, 142, 60, 0.08));
+}
+
+.domain-card h3 {
+  font-size: 1.02rem;
 }
 
 .project-card h3,
@@ -367,6 +410,10 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .domains-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
   }
@@ -375,6 +422,10 @@ h3 {
 @media (max-width: 720px) {
   .nav-toggle {
     display: inline-flex;
+  }
+
+  .lang-switch {
+    order: 2;
   }
 
   .nav-links {
@@ -404,6 +455,10 @@ h3 {
 
   .projects-grid,
   .results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .domains-grid {
     grid-template-columns: 1fr;
   }
 }

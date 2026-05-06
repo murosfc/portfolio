@@ -24,28 +24,32 @@
       <nav class="nav container">
         <a class="logo" href="#inicio">
           <span class="logo-mark">●</span>
-          <span id="brandName">Seu Nome</span>
+          <span id="brandName">Felipe Muros</span>
         </a>
+        <div class="lang-switch" aria-label="Seletor de idioma">
+          <button id="langPt" class="lang-btn active" type="button">PT</button>
+          <button id="langEn" class="lang-btn" type="button">EN</button>
+        </div>
         <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">Menu</button>
         <ul class="nav-links">
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#resultados">Resultados</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a id="navAbout" href="#sobre">Sobre</a></li>
+          <li><a id="navProjects" href="#projetos">Projetos</a></li>
+          <li><a id="navResults" href="#resultados">Resultados</a></li>
+          <li><a id="navContact" href="#contato">Contato</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
       <section id="inicio" class="hero container reveal">
-        <p class="eyebrow">Engenheiro de Software Full Stack</p>
-         <h1>
-           Eu construo
-          <span class="hero-accent">desafios complexos</span>
-            com foco em performance, qualidade e impacto de negocio.
+        <p id="heroEyebrow" class="eyebrow">Engenheiro de Software Full Stack</p>
+        <h1 id="heroTitle">
+          Eu construo
+          <span class="hero-accent">soluções digitais</span>
+          com foco em performance, qualidade e impacto de negócio.
         </h1>
         <p class="hero-lead" id="heroPitch">
-          Engenharia de software orientada a resultado, com foco em qualidade, velocidade de entrega e impacto de negocio.
+          Engenharia de software orientada a resultado, com foco em qualidade, velocidade de entrega e impacto de negócio.
         </p>
         <div class="hero-actions">
           <a id="ctaPrimary" class="btn btn-primary" href="#contato">Vamos conversar</a>
@@ -69,8 +73,8 @@
 
       <section id="sobre" class="section container reveal">
         <div class="section-head">
-          <p class="eyebrow">Sobre</p>
-          <h2>Posicionamento profissional</h2>
+          <p id="aboutEyebrow" class="eyebrow">Sobre</p>
+          <h2 id="aboutTitle">Posicionamento profissional</h2>
         </div>
         <div class="about-grid">
           <p id="aboutText">
@@ -87,33 +91,41 @@
         </div>
       </section>
 
+      <section id="setores" class="section container reveal">
+        <div class="section-head">
+          <p id="domainsEyebrow" class="eyebrow">Experiência setorial</p>
+          <h2 id="domainsTitle">Domínios onde agrego além do código</h2>
+        </div>
+        <div id="domainsGrid" class="domains-grid"></div>
+      </section>
+
       <section id="projetos" class="section container reveal">
         <div class="section-head">
-          <p class="eyebrow">Projetos em destaque</p>
-          <h2>Entregas com impacto</h2>
+          <p id="projectsEyebrow" class="eyebrow">Projetos em destaque</p>
+          <h2 id="projectsTitle">Entregas com impacto</h2>
         </div>
         <div id="projectsGrid" class="projects-grid"></div>
       </section>
 
       <section id="resultados" class="section container reveal">
         <div class="section-head">
-          <p class="eyebrow">Resultados</p>
-          <h2>O que eu gero de valor</h2>
+          <p id="resultsEyebrow" class="eyebrow">Resultados</p>
+          <h2 id="resultsTitle">O que eu gero de valor</h2>
         </div>
         <div class="results-grid" id="resultsGrid"></div>
       </section>
 
       <section id="contato" class="section container reveal">
         <div class="contact-card">
-          <p class="eyebrow">Contato</p>
-          <h2>Aberto a oportunidades e projetos estratégicos</h2>
-          <p>
+          <p id="contactEyebrow" class="eyebrow">Contato</p>
+          <h2 id="contactTitle">Aberto a oportunidades e projetos estratégicos</h2>
+          <p id="contactText">
             Se fizer sentido para seu time ou negócio, vamos conversar sobre como posso ajudar a acelerar resultados.
           </p>
           <div class="contact-actions">
             <a id="linkedinLink" class="btn btn-primary" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
             <a id="githubLink" class="btn btn-ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
-            <a id="emailLink" class="btn btn-ghost" href="mailto:email@exemplo.com">Email</a>
+            <a id="emailLink" class="btn btn-ghost" href="mailto:email@exemplo.com">E-mail</a>
           </div>
         </div>
       </section>
