@@ -309,6 +309,21 @@ h3 {
   font-size: 0.9rem;
 }
 
+.projects-groups {
+  display: grid;
+  gap: 26px;
+}
+
+.project-group {
+  display: grid;
+  gap: 12px;
+}
+
+.project-group-title {
+  margin: 0;
+  font-size: clamp(1.2rem, 2.3vw, 1.6rem);
+}
+
 .projects-grid,
 .results-grid {
   display: grid;
@@ -329,6 +344,15 @@ h3 {
   padding: 18px;
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
   box-shadow: var(--shadow);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.spacer {
+  flex: 1;
 }
 
 .domain-card {
@@ -353,15 +377,31 @@ h3 {
   font-size: 0.93rem;
 }
 
+.project-role {
+  margin: 10px 0 0;
+  color: #d3e3f3;
+  font-size: 0.92rem;
+}
+
+.project-role strong {
+  color: #f5fbff;
+}
+
 .project-points {
   margin: 12px 0 0;
   padding-left: 16px;
   color: var(--muted);
 }
 
+.project-links {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .project-link {
   display: inline-block;
-  margin-top: 14px;
   color: #b9fff9;
   text-decoration: none;
   border-bottom: 1px dashed rgba(185, 255, 249, 0.5);

@@ -35,6 +35,8 @@ const profileData = {
       sections: {
         projectsEyebrow: "Projetos em destaque",
         projectsTitle: "Entregas com impacto",
+        personalTitle: "Pessoais",
+        thirdPartyTitle: "Terceiros",
         domainsEyebrow: "Experiência setorial",
         domainsTitle: "Domínios onde agrego além do código",
         resultsEyebrow: "Resultados",
@@ -46,6 +48,11 @@ const profileData = {
       },
       labels: {
         projectLink: "Ver projeto",
+        appLink: "Ver Aplicativo",
+        roleLabel: "Atuação",
+        website: "Site",
+        playStore: "Play Store",
+        appStore: "App Store",
         email: "E-mail"
       },
       metrics: [
@@ -126,6 +133,44 @@ const profileData = {
           link: "https://github.com/murosfc/dante-sleep"
         }
       ],
+      thirdPartyProjects: [
+        {
+          name: "IPMacaé",
+          stack: "Angular, Firebase, Flutter",
+          description:
+            "IPMacaé é o aplicativo oficial da Igreja Presbiteriana de Macaé, projetado para manter os membros conectados e informados sobre atividades e eventos. O app envia comunicados importantes diretamente no dispositivo móvel, mantendo a comunidade atualizada com notícias e informações da igreja.",
+          role:
+            "Participei do desenvolvimento desde o início em Angular com conexão ao Firebase e também da migração do código para Flutter.",
+          links: [
+            {
+              label: "Play Store",
+              url: "https://play.google.com/store/apps/details?id=com.ipmacae.app"
+            },
+            {
+              label: "App Store",
+              url: "https://apps.apple.com/br/app/ipmaca%C3%A9/id6479720091"
+            }
+          ]
+        },
+        {
+          name: "SaberSim",
+          stack: "Angular, TypeScript, APIs REST",
+          description:
+            "Plataforma de simulação e otimização voltada para cenários esportivos e tomada de decisão baseada em dados, com foco em criar lineups e estratégias de forma mais inteligente.",
+          role:
+            "Atuei como desenvolvedor Front End Angular + TypeScript, implementando novas features e fazendo integração com APIs RESTful.",
+          link: "https://www.sabersim.com/"
+        },
+        {
+          name: "Cuewee",
+          stack: "Angular, Flutter, Audio Plugins",
+          description:
+            "App para transformar qualquer música em multitracks playback, com separação de stems por IA e click + guia automáticos. Ideal para ensaios e apresentações ao vivo.",
+          role:
+            "Atuei como desenvolvedor migrando o app de Angular para Flutter para executar plugins de áudio nativamente em Android, iOS e desktop.",
+          link: "https://cuewee.app/"
+        }
+      ],
       valueHighlights: [
         {
           title: "Visão de produto",
@@ -169,7 +214,9 @@ const profileData = {
       },
       sections: {
         projectsEyebrow: "Featured projects",
-        projectsTitle: "Impactful deliveries",
+        projectsTitle: "Impactful Deliveries",
+        personalTitle: "Personal",
+        thirdPartyTitle: "Third-party",
         domainsEyebrow: "Industry expertise",
         domainsTitle: "Domains where I add value beyond code",
         resultsEyebrow: "Results",
@@ -181,6 +228,11 @@ const profileData = {
       },
       labels: {
         projectLink: "View project",
+        appLink: "View App",
+        roleLabel: "Role",
+        website: "Website",
+        playStore: "Play Store",
+        appStore: "App Store",
         email: "Email"
       },
       metrics: [
@@ -261,6 +313,44 @@ const profileData = {
           link: "https://github.com/murosfc/dante-sleep"
         }
       ],
+      thirdPartyProjects: [
+        {
+          name: "IPMacaé",
+          stack: "Angular, Firebase, Flutter",
+          description:
+            "IPMacae is the official app of Igreja Presbiteriana de Macae, designed to keep members connected and informed about church events and activities through direct mobile announcements.",
+          role:
+            "I participated from the beginning in the Angular implementation with Firebase integration and later in the migration to Flutter.",
+          links: [
+            {
+              label: "Play Store",
+              url: "https://play.google.com/store/apps/details?id=com.ipmacae.app"
+            },
+            {
+              label: "App Store",
+              url: "https://apps.apple.com/br/app/ipmaca%C3%A9/id6479720091"
+            }
+          ]
+        },
+        {
+          name: "SaberSim",
+          stack: "Angular, TypeScript, REST APIs",
+          description:
+            "Simulation and optimization platform for sports-related, data-driven decision workflows, focused on building smarter lineup and strategy combinations.",
+          role:
+            "I worked as an Angular + TypeScript Front End developer, implementing new features and integrating RESTful APIs.",
+          link: "https://www.sabersim.com/"
+        },
+        {
+          name: "Cuewee",
+          stack: "Angular, Flutter, Audio Plugins",
+          description:
+            "App that turns any song into multitracks playback, using AI stem separation plus automatic click and guide tracks for rehearsals and live performances.",
+          role:
+            "I migrated the app from Angular to Flutter to run audio plugins natively on Android, iOS, and desktop.",
+          link: "https://cuewee.app/"
+        }
+      ],
       valueHighlights: [
         {
           title: "Product mindset",
@@ -322,27 +412,60 @@ function renderSkills(items) {
   list.innerHTML = items.map((skill) => `<li>${skill}</li>`).join("");
 }
 
-function renderProjects(items, linkLabel) {
+function renderProjectLinks(project, labels, isThirdParty = false) {
+  if (Array.isArray(project.links) && project.links.length > 0) {
+    return project.links
+      .map(
+        (item) =>
+          `<a class="project-link" href="${item.url}" target="_blank" rel="noreferrer">${item.label}</a>`
+      )
+      .join("");
+  }
+
+  if (project.link) {
+    const linkLabel = isThirdParty ? labels.appLink : labels.projectLink;
+    return `<a class="project-link" href="${project.link}" target="_blank" rel="noreferrer">${linkLabel}</a>`;
+  }
+
+  return "";
+}
+
+function renderProjects(items, thirdPartyItems, sections, labels) {
   const container = document.getElementById("projectsGrid");
   if (!container) {
     return;
   }
 
-  container.innerHTML = items
-    .map(
-      (project) => `
+  const buildCards = (projects, isThirdParty = false) =>
+    projects
+      .map(
+        (project) => `
       <article class="project-card">
         <h3>${project.name}</h3>
         <p class="project-meta">${project.stack}</p>
         <p class="project-meta">${project.description}</p>
-        <ul class="project-points">
-          ${project.outcomes.map((point) => `<li>${point}</li>`).join("")}
-        </ul>
-        <a class="project-link" href="${project.link}" target="_blank" rel="noreferrer">${linkLabel}</a>
+        ${project.role ? `<p class="project-role"><strong>${labels.roleLabel}:</strong> ${project.role}</p>` : ""}
+        ${Array.isArray(project.outcomes) && project.outcomes.length > 0
+          ? `<ul class="project-points">${project.outcomes.map((point) => `<li>${point}</li>`).join("")}</ul>`
+          : ""
+        }
+        <div class="spacer"></div>
+        <div class="project-links">${renderProjectLinks(project, labels, isThirdParty)}</div>
       </article>
     `
-    )
-    .join("");
+      )
+      .join("");
+
+  container.innerHTML = `
+    <div class="project-group">
+      <h3 class="project-group-title">${sections.personalTitle}</h3>
+      <div class="projects-grid">${buildCards(items, false)}</div>
+    </div>
+    <div class="project-group">
+      <h3 class="project-group-title">${sections.thirdPartyTitle}</h3>
+      <div class="projects-grid">${buildCards(thirdPartyItems, true)}</div>
+    </div>
+  `;
 }
 
 function renderValueHighlights(items) {
@@ -487,7 +610,7 @@ function applyLanguage(lang) {
   renderMetrics(content.metrics);
   renderSkills(content.skills);
   renderDomainExpertise(content.domainExpertise);
-  renderProjects(content.projects, content.labels.projectLink);
+  renderProjects(content.projects, content.thirdPartyProjects, content.sections, content.labels);
   renderValueHighlights(content.valueHighlights);
   setActiveLanguageButton(lang);
 }
